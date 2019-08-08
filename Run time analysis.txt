@@ -35,7 +35,7 @@ Line 76 to 78: Same as Line 72 to line 74.
 Thus, the overall complexity of this algorithm is O(n^2) + O(n) + O(n^2) + O(n) + O(n) = O(n^2)
 
 
-Task4:
+Task4: O(n^2)
 Line 29 to 36, line 39 to 42, line 47 to 50:
 For loop + list checking + list appending has a complexity of O(n * (n + 1)) = O(n^2)
 Thus, the overall complexity of this algorithm is O(n^2)
