@@ -1,0 +1,42 @@
+Runtime Analysis
+
+Task0: O(1)
+Line 21 to 22:
+We are doing the list of list access via index, the complexity of which is simply O(1).
+Thus, this algorithm has a complexity of O(1*1) = O(1).
+
+Task1: O(n)
+Line 24, 27 is a for loop, for loop over an input of n has a complexity of O(n);
+Line 25-26, 28-29 is inside the for loop, which is the list appending process, since appending an item to a list has a complexity of O(1), the overall for loop has a complexity of O(n*(1 + 1)) = O(n)
+Line 34 has a set() method to deduplicate items, since this is based on hash table, it has a complexity of O(n) under the worst case.
+Thus, the overall complexity of this algothrim is O(n + n + n) = O(n).
+
+Task2: O(n^3)
+1. Line 22 to 36: According to the analysis in Task2.py, this part(two for-loops with two list appending process, along with a set() method) has a complexity of O(n).
+2. Line 42 and 43: We have two nested for-loops, in the worst case, we have to do 2 full for-loop iterations, thus the complexity is O(n^2).
+Line 44: List checking for matching has a complexity of O(n)
+Line 45: The sum process has a complexity of O(1)
+Line 46: Dictionary appending has a complexity of O(1)
+Thus, this part has a complexity of O(n * n * (n + 1 + 1)) = O(n^3)
+3. Line 53: The max() method has a complexity of O(n), since under the worst circumstances, we have to check each item.
+4. Thus, the overall complexity of this algorithm is O(n) + O(n^3) + O(n) = O(n^3)
+
+
+Task3: O(n^2)
+Line 37: For loop has a complexity of O(n)
+Line 38: Simple comparison has a complexity of O(1)
+Line 39: List checking for existence has a complexity of O(n)
+Line 40: List appending has a complexity of O(1)
+Thus, line 37 to 40 has a complexity of O(n * (1 + n)) = O(n^2)
+Line 42 to 47: For loop with a list appending process has a complexity of O(n * 1) = O(n)
+Line 49 to 52: For loop + list checking + list appending has a complexity of O(n * (n + 1)) = O(n^2)
+Line 72 to 74: For loop + simple comparison + list appending = O(n + 1 + 1) = O(n)
+Line 76 to 78: Same as Line 72 to line 74.
+Thus, the overall complexity of this algorithm is O(n^2) + O(n) + O(n^2) + O(n) + O(n) = O(n^2)
+
+
+Task4:
+Line 29 to 36, line 39 to 42, line 47 to 50:
+For loop + list checking + list appending has a complexity of O(n * (n + 1)) = O(n^2)
+Thus, the overall complexity of this algorithm is O(n^2)
+
