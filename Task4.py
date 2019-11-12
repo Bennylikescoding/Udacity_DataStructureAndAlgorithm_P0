@@ -44,15 +44,10 @@ for outgoing_call in calls:
 #print (len(list_negative),len(out_going_calls))
 
 #subtracting records:
-list_telemarketers = []
+list_telemarketers = set() # As the reviewer suggested, we use set() here to automatically handle with duplicaiton
 for number in out_going_calls:
 	if number not in list_negative:
-		list_telemarketers.append(number)
+		list_telemarketers.add(number)
 print ("These numbers could be telemarketers: ")
 for i in sorted(list_telemarketers):
 	print (i)
-
-
-
-
-
