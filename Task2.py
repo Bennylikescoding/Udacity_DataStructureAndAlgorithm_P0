@@ -55,19 +55,3 @@ longest_time_spent = max(dict_of_telephone_time.values())
 for key, value in dict_of_telephone_time.items():
 	if value == longest_time_spent:
 		print (key," spent the longest time", longest_time_spent, "seconds, on the phone during September 2016.")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
