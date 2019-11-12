@@ -42,7 +42,7 @@ for call in calls:
 list_of_areacodes_prefix = []
 for record in list_of_receiver_called_by_080:
 	if record.startswith('('):
-		list_of_areacodes_prefix.append(record[2:record.index(')')])
+		list_of_areacodes_prefix.append(record[1:record.index(')')]) # As the reviewer suggested, change record[2:record.index(')')] to record[1:record.index(')')] 
 	else:
 		list_of_areacodes_prefix.append(record[0:4])
 
@@ -83,12 +83,3 @@ for item2 in list_of_sender_080:
 # Format percentage, ref: https://stackoverflow.com/questions/5306756/how-to-show-percentage-in-python
 percentage = "{0:.2%}".format(len(list_of_receiver_also_080) / len(list_of_sender_080))
 print (percentage, "percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.")
-
-
-
-
-
-
-
-
-
